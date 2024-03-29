@@ -2,7 +2,6 @@ import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
 import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/screens/favourites_screen/favourites_screen.dart';
-import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "748378346871",
+    "firebase_url": "https://smart-class-ad023-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "smart-class-ad023",
+    "storage_bucket": "smart-class-ad023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748378346871:android:f279f747f01df955f1fd72",
+        "android_client_info": {
+          "package_name": "com.domus.smarthome.domus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnUe2xBTt0G6RsQV7y1jdtyecDL-xNd0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

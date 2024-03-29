@@ -1,11 +1,13 @@
 import 'package:domus/provider/getit.dart';
 import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
-// import 'package:domus/src/screens/about_screen/about_us_screen.dart';
 import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   setupLocator();
   runApp(const MyApp());
 }
