@@ -14,7 +14,6 @@ class _FavouriteListState extends State<FavouriteList> {
   List<FavouriteTile> favs = <FavouriteTile>[];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     formList();
   }

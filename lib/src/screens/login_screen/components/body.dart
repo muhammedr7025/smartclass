@@ -51,14 +51,14 @@ class _BodyState extends State<Body> {
                       'SMART',
                       style: Theme.of(context)
                           .textTheme
-                          .headline2!
+                          .displayMedium!
                           .copyWith(color: Colors.black, fontSize: 33),
                     ),
                     Text(
                       'CLASS',
                       style: Theme.of(context)
                           .textTheme
-                          .headline1!
+                          .displayLarge!
                           .copyWith(color: Colors.black, fontSize: 64),
                     )
                   ],

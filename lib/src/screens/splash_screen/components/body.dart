@@ -27,13 +27,13 @@ class Body extends StatelessWidget {
           ),
           Text(
             'Lumia',
-            style: Theme.of(context).textTheme.headline1!.copyWith(
+            style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   color: Colors.white,
                 ),
           ),
           Text(
             'Smart Class can change\nway you live in the future',
-            style: Theme.of(context).textTheme.headline3!.copyWith(
+            style: Theme.of(context).textTheme.displaySmall!.copyWith(
                   color: const Color(0xFFBDBDBD),
                 ),
           ),
@@ -53,7 +53,7 @@ class Body extends StatelessWidget {
             ),
             child: Text(
               'Get Started',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           )
         ],

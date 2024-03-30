@@ -38,8 +38,8 @@ class HomeScreen extends StatelessWidget {
                     // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Hi,',
-                        style: Theme.of(context).textTheme.headline1,
+                        'Hi,      ',
+                        style: Theme.of(context).textTheme.displayLarge,
                       ),
                       SizedBox(
                         width: getProportionateScreenWidth(60),

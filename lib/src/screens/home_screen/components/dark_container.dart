@@ -13,7 +13,6 @@ class DarkContainer extends StatelessWidget {
     Key? key,
     required this.iconAsset,
     required this.device,
-
     required this.itsOn,
     required this.switchButton,
     required this.isFav,
@@ -61,9 +60,9 @@ class DarkContainer extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: switchFav,
-                    child:  Icon(
+                    child: Icon(
                       Icons.star_rounded,
-                      color: isFav ?  Colors.amber:const Color(0xFF808080),
+                      color: isFav ? Colors.amber : const Color(0xFF808080),
                       // color: Color(0xFF808080),
                     ),
                   ),
@@ -75,7 +74,7 @@ class DarkContainer extends StatelessWidget {
                   Text(
                     device,
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                           color: itsOn ? Colors.white : Colors.black,
                         ),
                   ),
@@ -87,7 +86,7 @@ class DarkContainer extends StatelessWidget {
                   Text(
                     itsOn ? 'On' : 'Off',
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                           color: itsOn ? Colors.white : Colors.black,
                         ),
                   ),
