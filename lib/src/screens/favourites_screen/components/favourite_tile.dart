@@ -5,7 +5,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 class FavouriteTile extends StatelessWidget {
   final String iconAsset;
   final String device;
-  final String deviceCount;
   final bool itsOn;
   final VoidCallback switchButton;
   final bool isFav;
@@ -14,7 +13,6 @@ class FavouriteTile extends StatelessWidget {
     Key? key,
     required this.iconAsset,
     required this.device,
-    required this.deviceCount,
     required this.itsOn,
     required this.switchButton,
     required this.isFav,
@@ -118,21 +116,11 @@ class FavouriteTile extends StatelessWidget {
                   )
                 ],
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(
+                  SizedBox(
                     height: 15,
-                  ),
-                  Text(
-                    deviceCount,
-                    textAlign: TextAlign.left,
-                    style: const TextStyle(
-                        color: Color.fromRGBO(166, 166, 166, 1),
-                        fontSize: 13,
-                        letterSpacing: 0,
-                        fontWeight: FontWeight.normal,
-                        height: 1.6),
                   ),
                 ],
               ),

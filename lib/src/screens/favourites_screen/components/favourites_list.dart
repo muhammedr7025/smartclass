@@ -26,9 +26,8 @@ class _FavouriteListState extends State<FavouriteList> {
           itsOn: widget.model.isLightOn,
           switchFav: widget.model.lightFav,
           switchButton: widget.model.lightSwitch,
-          iconAsset: 'assets/icons/svg/speaker.svg',
+          iconAsset: 'assets/icons/svg/light.svg',
           device: 'Light',
-          deviceCount: '1 device',
           isFav: widget.model.isSpeakerFav,
         ),
       );
@@ -41,7 +40,6 @@ class _FavouriteListState extends State<FavouriteList> {
           switchFav: widget.model.fanFav,
           iconAsset: 'assets/icons/svg/fan.svg',
           device: 'Fan',
-          deviceCount: '2 devices',
           isFav: widget.model.isFanFav,
         ),
       );
