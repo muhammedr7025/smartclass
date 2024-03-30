@@ -110,16 +110,16 @@ class _BodyState extends State<Body> {
         Padding(
           padding: const EdgeInsets.only(left: 20.0, right: 20),
           child: GestureDetector(
-            onTap:  () async {
-                final message = await AuthService().registration(
-                  email: usernameController.text,
-                  password: passwordController.text,
-                );
-                if (message!.contains('Success')) {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const HomeScreen()));
-                }
-                ScaffoldMessenger.of(context).showSnackBar(
+            onTap: () async {
+              final message = await AuthService().login(
+                email: usernameController.text,
+                password: passwordController.text,
+              );
+              if (message!.contains('Success')) {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const HomeScreen()));
+              }
+              ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(message),
                 ),
@@ -142,6 +142,5 @@ class _BodyState extends State<Body> {
         ),
       ],
     );
-    
   }
 }

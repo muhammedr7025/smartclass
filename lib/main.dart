@@ -1,3 +1,4 @@
+import 'package:domus/firebase_options.dart';
 import 'package:domus/provider/getit.dart';
 import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
@@ -7,7 +8,9 @@ import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   setupLocator();
   runApp(const MyApp());
 }
