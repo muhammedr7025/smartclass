@@ -1,7 +1,7 @@
-import 'package:domus/src/screens/menu_page/components/list_tile.dart';
-import 'package:domus/src/screens/stats_screen/stats_screen.dart';
+import 'package:lumia/src/screens/menu_page/components/list_tile.dart';
+import 'package:lumia/src/screens/stats_screen/stats_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:domus/config/size_config.dart';
+import 'package:lumia/config/size_config.dart';
 
 class MenuList extends StatelessWidget {
   const MenuList({Key? key}) : super(key: key);

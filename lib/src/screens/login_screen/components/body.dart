@@ -1,5 +1,5 @@
-import 'package:domus/config/size_config.dart';
-import 'package:domus/src/screens/home_screen/home_screen.dart';
+import 'package:lumia/config/size_config.dart';
+import 'package:lumia/src/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../auth_service.dart';

@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:domus/provider/base_model.dart';
+import 'package:lumia/provider/base_model.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class SmartFanViewModel extends BaseModel {

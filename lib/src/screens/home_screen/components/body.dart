@@ -1,7 +1,7 @@
-import 'package:domus/config/size_config.dart';
-import 'package:domus/src/screens/home_screen/components/savings_container.dart';
-import 'package:domus/src/screens/home_screen/components/weather_container.dart';
-import 'package:domus/view/home_screen_view_model.dart';
+import 'package:lumia/config/size_config.dart';
+import 'package:lumia/src/screens/home_screen/components/savings_container.dart';
+import 'package:lumia/src/screens/home_screen/components/weather_container.dart';
+import 'package:lumia/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'dark_container.dart';
 

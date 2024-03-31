@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:domus/provider/base_model.dart';
+import 'package:lumia/provider/base_model.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeScreenViewModel extends BaseModel {
@@ -20,18 +20,22 @@ class HomeScreenViewModel extends BaseModel {
     randomNumber = Random().nextInt(8);
     notifyListeners();
   }
-  void lightFav(){
+
+  void lightFav() {
     isLightFav = !isLightFav;
     notifyListeners();
   }
-  void acFav(){
+
+  void acFav() {
     isACFav = !isACFav;
     notifyListeners();
   }
+
   void speakerFav() {
     isSpeakerFav = !isSpeakerFav;
     notifyListeners();
   }
+
   void fanFav() {
     isFanFav = !isFanFav;
     notifyListeners();
@@ -51,6 +55,7 @@ class HomeScreenViewModel extends BaseModel {
     isFanON = !isFanON;
     notifyListeners();
   }
+
   void lightSwitch() {
     isLightOn = !isLightOn;
     notifyListeners();

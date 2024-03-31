@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:domus/config/size_config.dart';
+import 'package:lumia/config/size_config.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MenuListItems extends StatelessWidget {

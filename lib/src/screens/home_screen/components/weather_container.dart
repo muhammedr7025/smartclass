@@ -1,5 +1,5 @@
-import 'package:domus/config/size_config.dart';
-import 'package:domus/view/home_screen_view_model.dart';
+import 'package:lumia/config/size_config.dart';
+import 'package:lumia/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 
 class WeatherContainer extends StatelessWidget {
@@ -44,11 +44,11 @@ class WeatherContainer extends StatelessWidget {
                       height: getProportionateScreenHeight(5),
                     ),
                     Text(
-                      '27 Mar 2022',
+                      '31 Mar 2024',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     Text(
-                      'Jagakarsa,Jakarta',
+                      'Stist,Tvm',
                       style: Theme.of(context).textTheme.headlineSmall,
                     )
                   ],

@@ -1,4 +1,4 @@
-import 'package:domus/src/screens/stats_screen/components.dart';
+import 'package:lumia/src/screens/stats_screen/components.dart';
 import 'package:flutter/material.dart';
 
 class StatsScreen extends StatelessWidget {

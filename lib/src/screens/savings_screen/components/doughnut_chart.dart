@@ -1,10 +1,12 @@
-import 'package:domus/config/size_config.dart';
-import 'package:domus/src/screens/savings_screen/components/chart_data.dart';
+import 'package:lumia/config/size_config.dart';
+import 'package:lumia/src/screens/savings_screen/components/chart_data.dart';
 import 'package:flutter/material.dart';
 import 'package:awesome_circular_chart/awesome_circular_chart.dart';
 
 class DoughnutChart extends StatefulWidget {
-  const DoughnutChart({Key? key, required this.period, required this.totalSavings}) : super(key: key);
+  const DoughnutChart(
+      {Key? key, required this.period, required this.totalSavings})
+      : super(key: key);
 
   final String period;
   final int totalSavings;
@@ -14,8 +16,8 @@ class DoughnutChart extends StatefulWidget {
 }
 
 class _DoughnutChartState extends State<DoughnutChart> {
-
-  final GlobalKey<AnimatedCircularChartState> _chartKey = GlobalKey<AnimatedCircularChartState>();
+  final GlobalKey<AnimatedCircularChartState> _chartKey =
+      GlobalKey<AnimatedCircularChartState>();
   late List<CircularStackEntry> _data;
 
   @override
@@ -33,9 +35,7 @@ class _DoughnutChartState extends State<DoughnutChart> {
 
       //size of the doughnut chart
       size: Size(
-          getProportionateScreenWidth(90),
-          getProportionateScreenHeight(90)
-      ),
+          getProportionateScreenWidth(90), getProportionateScreenHeight(90)),
 
       //radius of the inner circle
       holeRadius: getProportionateScreenHeight(28),

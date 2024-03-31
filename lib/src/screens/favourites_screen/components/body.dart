@@ -1,5 +1,6 @@
-import 'package:domus/config/size_config.dart';
+import 'package:lumia/config/size_config.dart';
 import 'package:flutter/material.dart';
+
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
@@ -12,7 +13,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.only(left: 10,right: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10),
       width: MediaQuery.of(context).size.width,
       // height: getProportionateScreenHeight(80),
       // decoration: BoxDecoration(
@@ -24,15 +25,17 @@ class _BodyState extends State<Body> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SizedBox(height:getProportionateScreenHeight(65) ,),
+          SizedBox(
+            height: getProportionateScreenHeight(65),
+          ),
           Container(
             height: getProportionateScreenHeight(170),
             decoration: const BoxDecoration(
-
-              image:DecorationImage(
+              image: DecorationImage(
                 image: AssetImage("assets/images/favourite.png"),
               ),
-            ),),
+            ),
+          ),
           SizedBox(
             height: getProportionateScreenHeight(20),
           ),
@@ -52,7 +55,6 @@ class _BodyState extends State<Body> {
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
-
           ),
           SizedBox(
             height: getProportionateScreenHeight(10),
@@ -65,17 +67,17 @@ class _BodyState extends State<Body> {
               borderRadius: BorderRadius.circular(20),
             ),
             child: GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
               child: const Center(
-                  child: Text('Add to favourites',
-                    style: TextStyle(
-                        fontSize: 19,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),
+                  child: Text(
+                'Add to favourites',
+                style: TextStyle(
+                    fontSize: 19,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              )),
             ),
           ),
         ],

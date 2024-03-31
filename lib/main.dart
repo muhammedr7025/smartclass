@@ -1,8 +1,8 @@
-import 'package:domus/firebase_options.dart';
-import 'package:domus/provider/getit.dart';
-import 'package:domus/routes/routes.dart';
-import 'package:domus/service/navigation_service.dart';
-import 'package:domus/src/screens/splash_screen/splash_screen.dart';
+import 'package:lumia/firebase_options.dart';
+import 'package:lumia/provider/getit.dart';
+import 'package:lumia/routes/routes.dart';
+import 'package:lumia/service/navigation_service.dart';
+import 'package:lumia/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
