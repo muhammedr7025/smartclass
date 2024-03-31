@@ -1,4 +1,5 @@
 import 'package:lumia/config/size_config.dart';
+import 'package:lumia/service/preferences_service.dart';
 import 'package:lumia/src/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -41,28 +42,6 @@ class _BodyState extends State<Body> {
               width: double.infinity,
               fit: BoxFit.fill,
             ),
-            Positioned(
-                bottom: getProportionateScreenHeight(20),
-                left: getProportionateScreenWidth(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'SMART',
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium!
-                          .copyWith(color: Colors.black, fontSize: 33),
-                    ),
-                    Text(
-                      'CLASS',
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayLarge!
-                          .copyWith(color: Colors.black, fontSize: 64),
-                    )
-                  ],
-                )),
           ],
         ),
         const Padding(
@@ -116,6 +95,8 @@ class _BodyState extends State<Body> {
                 password: passwordController.text,
               );
               if (message!.contains('Success')) {
+                final preferencesService = PreferencesService();
+                await preferencesService.saveLoginStatus(true);
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => const HomeScreen()));
               }

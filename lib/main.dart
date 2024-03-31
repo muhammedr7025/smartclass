@@ -2,6 +2,8 @@ import 'package:lumia/firebase_options.dart';
 import 'package:lumia/provider/getit.dart';
 import 'package:lumia/routes/routes.dart';
 import 'package:lumia/service/navigation_service.dart';
+import 'package:lumia/service/preferences_service.dart';
+import 'package:lumia/src/screens/home_screen/home_screen.dart';
 import 'package:lumia/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -11,12 +13,17 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+final preferencesService = PreferencesService();
+  bool isLoggedIn = await preferencesService.checkLoginStatus();
   setupLocator();
-  runApp(const MyApp());
+  runApp(MyApp(isLoggedIn: isLoggedIn));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+    final bool isLoggedIn;
+
+  const MyApp({Key? key, required this.isLoggedIn}) : super(key: key);
+
 
   final ThemeMode themeMode = ThemeMode.system;
   @override
@@ -86,7 +93,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: const SplashScreen(),
+      home: isLoggedIn ? const HomeScreen(): const SplashScreen(),
     );
   }
 }

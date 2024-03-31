@@ -41,7 +41,6 @@ class _WeatherContainerState extends State<WeatherContainer> {
 
   @override
   Widget build(BuildContext context) {
-    print(weatherData);
     return Stack(
       children: [
         Container(
@@ -78,7 +77,7 @@ class _WeatherContainerState extends State<WeatherContainer> {
                       height: getProportionateScreenHeight(5),
                     ),
                     Text(
-                      DateFormat('d MMMM yyyy').format(DateTime
+                      DateFormat('dd MMMM yyyy').format(DateTime
                           .now()), // If this is supposed to be dynamic, ensure safe handling as above
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
