@@ -28,6 +28,7 @@ dependencies:
   firebase_database: ^10.4.11
   flutter_launcher_icons: ^0.13.1
   http: ^1.2.1
+  intl: ^0.18.1
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
