@@ -27,14 +27,14 @@ class AboutUs extends StatelessWidget {
                 child: Column(
               children: [
                 Text(
-                  'Domus',
+                  'Lumia',
                   style: TextStyle(
                       fontFamily: 'Lexend',
                       fontSize: 48,
                       fontWeight: FontWeight.w700),
                 ),
                 Text(
-                  'Smart Home App',
+                  'Smart Class App',
                   style: TextStyle(
                       fontSize: 24,
                       fontFamily: 'Lexend',
@@ -59,141 +59,50 @@ class AboutUs extends StatelessWidget {
           ),
           ListTile(
             contentPadding: const EdgeInsets.only(left: 33.7, right: 10),
-            leading: SvgPicture.asset('assets/icons/svg/profile.svg'),
-            title: const Text(
-              'Lead Developer',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Lexend',
-                fontSize: 20,
-              ),
-            ),
-            subtitle: const Text(
-              'Lakhan Kumawat',
-              style: TextStyle(
-                  fontSize: 14,
-                  fontFamily: 'Lexend',
-                  fontWeight: FontWeight.w300),
-            ),
-            onTap: () {},
-          ),
-          const SizedBox(
-            height: 12,
-          ),
-          ListTile(
-            contentPadding: const EdgeInsets.only(left: 33.7, right: 10),
             leading: SvgPicture.asset('assets/icons/svg/team.svg'),
             title: const Text(
-              'Domus Team',
+              'Lumia Developers',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontFamily: 'Lexend',
-                fontSize: 20,
-              ),
-            ),
-            subtitle: const Text(
-              'People who help with development and testing',
-              style: TextStyle(
-                fontSize: 14,
-                fontFamily: 'Lexend',
+                fontSize: 25,
               ),
             ),
             onTap: () {},
-          ),
-          const SizedBox(
-            height: 12,
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 33.7, right: 10),
-            leading: SvgPicture.asset(
-              'assets/icons/svg/star.svg',
-            ),
-            title: const Text(
-              'Acknowledgement',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Lexend',
-                fontSize: 20,
-              ),
-            ),
+            contentPadding: const EdgeInsets.only(left: 55.7, right: 10),
             subtitle: const Text(
-              'People and open source projects that helped the development of Domus',
+              '1. Aryan',
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 20,
                 fontFamily: 'Lexend',
               ),
             ),
             onTap: () {},
-          ),
-          const SizedBox(
-            height: 12,
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 33.7, right: 10),
-            leading: SvgPicture.asset('assets/icons/svg/help.svg'),
-            title: const Text(
-              'Help',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Lexend',
-                fontSize: 20,
-              ),
-            ),
+            contentPadding: const EdgeInsets.only(left: 55.7, right: 10),
             subtitle: const Text(
-              'Answers to frequently asked questions',
+              '2. Mohammed Ziyan',
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 20,
                 fontFamily: 'Lexend',
               ),
             ),
             onTap: () {},
-          ),
-          const SizedBox(
-            height: 12,
           ),
           ListTile(
-            contentPadding: const EdgeInsets.only(left: 33.7, right: 10),
-            leading: SvgPicture.asset('assets/icons/svg/chat.svg'),
-            title: const Text(
-              'Social Networks',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Lexend',
-                fontSize: 20,
-              ),
-            ),
+            contentPadding: const EdgeInsets.only(left: 55.7, right: 10),
             subtitle: const Text(
-              'Follow Domus on social networks',
+              '3. Dev',
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 20,
                 fontFamily: 'Lexend',
               ),
             ),
             onTap: () {},
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 30),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Made with ',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Lexend',
-                      fontWeight: FontWeight.w300),
-                ),
-                SvgPicture.asset('assets/icons/svg/heart.svg'),
-                const Text(
-                  ' in IN',
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontFamily: 'Lexend',
-                      fontWeight: FontWeight.w300),
-                ),
-              ],
-            ),
-          )
         ],
       ),
     );

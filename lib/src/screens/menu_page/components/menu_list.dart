@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:lumia/service/preferences_service.dart';
+import 'package:lumia/src/screens/about_screen/about_us_screen.dart';
 import 'package:lumia/src/screens/menu_page/components/list_tile.dart';
 import 'package:lumia/src/screens/splash_screen/splash_screen.dart';
 import 'package:lumia/src/screens/stats_screen/stats_screen.dart';
@@ -40,10 +41,10 @@ class _MenuListState extends State<MenuList> {
           height: getProportionateScreenHeight(10),
         ),
         MenuListItems(
-          iconPath: 'assets/icons/menu_icons/faq.svg',
-          itemName: 'FAQ',
-          function: () {},
-        ),
+            iconPath: 'assets/icons/menu_icons/faq.svg',
+            itemName: 'FAQ',
+            function: () => Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const AboutUs()))),
         SizedBox(
           height: getProportionateScreenHeight(10),
         ),
