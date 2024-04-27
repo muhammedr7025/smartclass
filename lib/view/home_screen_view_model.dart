@@ -1,7 +1,7 @@
 import 'dart:math';
-
 import 'package:lumia/provider/base_model.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class HomeScreenViewModel extends BaseModel {
   //-------------VARIABLES-------------//
@@ -9,13 +9,35 @@ class HomeScreenViewModel extends BaseModel {
   int randomNumber = 1;
   final PageController pageController = PageController();
   bool isLightOn = true;
-  bool isACON = false;
-  bool isSpeakerON = false;
   bool isFanON = false;
+  bool lightVal = true;
+  bool fanVal = true;
   bool isLightFav = false;
-  bool isACFav = false;
-  bool isSpeakerFav = false;
   bool isFanFav = false;
+  final DatabaseReference _lightRef = FirebaseDatabase.instance.ref('light');
+  final DatabaseReference _fanRef = FirebaseDatabase.instance.ref('fan');
+  HomeScreenViewModel() {
+    initFirebaseListeners();
+  }
+  void initFirebaseListeners() {
+    _lightRef.onValue.listen((event) {
+      if (event.snapshot.exists) {
+        // Safely cast the value to bool using as and handle possible null
+        isLightOn = event.snapshot.value as bool? ?? false;
+        print(isLightOn);
+        notifyListeners(); // Notify listeners to rebuild the dependent UI
+      }
+    });
+
+    _fanRef.onValue.listen((event) {
+      if (event.snapshot.exists) {
+        // Safely cast the value to bool using as and handle possible null
+        isFanON = event.snapshot.value as bool? ?? false;
+        notifyListeners(); // Notify listeners to rebuild the dependent UI
+      }
+    });
+  }
+
   void generateRandomNumber() {
     randomNumber = Random().nextInt(8);
     notifyListeners();
@@ -26,38 +48,26 @@ class HomeScreenViewModel extends BaseModel {
     notifyListeners();
   }
 
-  void acFav() {
-    isACFav = !isACFav;
-    notifyListeners();
-  }
-
-  void speakerFav() {
-    isSpeakerFav = !isSpeakerFav;
-    notifyListeners();
-  }
-
   void fanFav() {
     isFanFav = !isFanFav;
     notifyListeners();
   }
 
-  void acSwitch() {
-    isACON = !isACON;
-    notifyListeners();
-  }
-
-  void speakerSwitch() {
-    isSpeakerON = !isSpeakerON;
-    notifyListeners();
-  }
-
-  void fanSwitch() {
+  void fanSwitch() async {
+    // Toggle the state of fan and update Firebase
+    initFirebaseListeners();
     isFanON = !isFanON;
+
+    await _fanRef.set(isFanON);
     notifyListeners();
   }
 
-  void lightSwitch() {
+  void lightSwitch() async {
+    // Toggle the state of light and update Firebase
+    initFirebaseListeners();
     isLightOn = !isLightOn;
+
+    await _lightRef.set(isLightOn);
     notifyListeners();
   }
 

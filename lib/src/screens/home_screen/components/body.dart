@@ -5,10 +5,15 @@ import 'package:lumia/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'dark_container.dart';
 
-class Body extends StatelessWidget {
+class Body extends StatefulWidget {
   final HomeScreenViewModel model;
   const Body({Key? key, required this.model}) : super(key: key);
 
+  @override
+  State<Body> createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -24,11 +29,11 @@ class Body extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: WeatherContainer(model: model),
+              child: WeatherContainer(model: widget.model),
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: SavingsContainer(model: model),
+              child: SavingsContainer(model: widget.model),
             ),
             Row(
               children: [
@@ -36,12 +41,12 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isLightOn,
-                      switchButton: model.lightSwitch,
+                      itsOn: widget.model.isLightOn,
+                      switchButton: widget.model.lightSwitch,
                       iconAsset: 'assets/icons/svg/light.svg',
                       device: 'Lightening',
-                      switchFav: model.lightFav,
-                      isFav: model.isLightFav,
+                      switchFav: widget.model.lightFav,
+                      isFav: widget.model.isLightFav,
                     ),
                   ),
                 ),
@@ -49,12 +54,12 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isFanON,
-                      switchButton: model.fanSwitch,
+                      itsOn: widget.model.isFanON,
+                      switchButton: widget.model.fanSwitch,
                       iconAsset: 'assets/icons/svg/fan.svg',
                       device: 'Fan',
-                      switchFav: model.fanFav,
-                      isFav: model.isFanFav,
+                      switchFav: widget.model.fanFav,
+                      isFav: widget.model.isFanFav,
                     ),
                   ),
                 ),

@@ -30,7 +30,7 @@ class SavingsContainer extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Energy Saving',
+                      'Energy Consumption',
                       style: Theme.of(context).textTheme.displayMedium,
                     ),
                     const SizedBox(
